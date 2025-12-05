@@ -1,85 +1,85 @@
-# Crowdsourced Address Feedback Platform v2.0
-
-A modern, India-focused platform for crowdsourcing address data with advanced mapping capabilities.
+# Crowdsourced Address Feedback Platform - Version 0.3
 
 ## Overview
+Version 0.3 represents a complete, production-ready crowdsourced address feedback platform with full user authentication, mapping capabilities, and gamification system.
 
-This platform allows users to contribute to a comprehensive map of India by submitting address information for various location types including buildings, streets, landmarks, and public facilities. The platform features:
+## Key Features
 
-- Interactive mapping interface focused on India
-- Support for multiple location types relevant to Indian geography
-- Gamification system to encourage participation
-- User authentication and profile management
-- Data validation specific to Indian addresses
+### 🔐 User Authentication
+- Secure login system
+- User session management
+- Profile management
 
-## Features
+### 🗺️ Core Mapping Functions
+- **Mark Building Entrances** (🏢) - Add building entrance locations
+- **Add Missing Streets** (🛣️) - Document unlisted streets and roads
+- **Update Locality Boundaries** (🌐) - Refine administrative boundaries
+- **Flag Fake/Duplicate Addresses** (🚩) - Report incorrect entries
 
-### Core Functionality
-- **Interactive Map**: Leaflet.js based map centered on India
-- **Location Types**: 
-  - Building Entrances
-  - Missing Streets
-  - Boundary Updates
-  - Fake/Duplicate Flags
-  - Landmarks
-  - Public Facilities
-- **User Authentication**: OAuth2 integration with Google and GitHub
-- **Data Management**: PostgreSQL with PostGIS for geospatial data
+### 🎮 Gamification System
+- **Points-Based Rewards**: Earn points for quality submissions
+- **Level Progression**: Advance through user levels
+- **Achievement Tracking**: Monitor contributions and milestones
+- **Leaderboards**: Compete with other contributors
 
-### India-Specific Features
-- **Indian Address Validation**: Pincode, state, and coordinate validation
-- **Cultural Theming**: UI designed with Indian cultural elements
-- **Localized Gamification**: Achievements relevant to Indian mapping
-- **Boundary Visualization**: Display of India and state boundaries
+### 📊 Data Management
+- Comprehensive location data collection
+- GPS accuracy validation
+- Address verification workflows
+- Data quality assurance
 
 ## Technology Stack
+- **Frontend**: React.js with Vite
+- **Mapping**: Leaflet.js with OpenStreetMap
+- **Backend**: Node.js with Express
+- **Database**: PostgreSQL with PostGIS
+- **Authentication**: JWT-based secure sessions
 
-### Frontend
-- React.js with Hooks
-- Leaflet.js for mapping
-- React Router for navigation
-- CSS Modules for styling
-
-### Backend
-- Node.js with Express.js
-- PostgreSQL with PostGIS extension
-- OAuth2 for authentication
-
-### DevOps
-- Docker for containerization
-- GitHub Actions for CI/CD
-
-## Getting Started
+## Installation
 
 ### Prerequisites
-- Node.js (v16 or higher)
-- PostgreSQL with PostGIS
-- npm or yarn
+- Node.js v16+
+- PostgreSQL with PostGIS extension
+- npm or yarn package manager
 
-### Installation
-
-1. Clone the repository
-2. Install dependencies for frontend and backend
-3. Set up the database
-4. Configure environment variables
-5. Run the application
-
-## Project Structure
-
+### Frontend Setup
+```bash
+cd frontend
+npm install
+npm run dev
 ```
-crowdsourced-address-platform/
-├── frontend/           # React frontend application
-├── backend/            # Node.js/Express backend API
-├── docs/               # Documentation
-├── ml/                 # Machine learning components
-├── README.md           # This file
-└── package.json        # Root package file
+
+### Backend Setup
+```bash
+cd backend
+npm install
+npm run dev
 ```
+
+## Usage Instructions
+
+1. **Login**: Access the application and log in with your credentials
+2. **Navigate**: Use the map interface to explore locations
+3. **Contribute**: 
+   - Click on the map to add new locations
+   - Select appropriate location type
+   - Fill in detailed information
+   - Submit with GPS evidence for bonus points
+4. **Track Progress**: Monitor your points, level, and contributions
+
+## API Endpoints
+- `GET /api/addresses` - Retrieve address data
+- `POST /api/addresses` - Submit new address information
+- `PUT /api/addresses/:id` - Update existing addresses
+- `DELETE /api/addresses/:id` - Remove incorrect entries
 
 ## Contributing
-
-Please read CONTRIBUTING.md for details on our code of conduct and the process for submitting pull requests.
+This platform is designed for community-driven address data improvement. Contributions are welcome through the standard fork and pull request workflow.
 
 ## License
+MIT License
 
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+## Version History
+- **0.1**: Initial prototype with basic mapping
+- **0.2**: Enhanced UI/UX and improved functionality
+- **0.3**: Production-ready platform with full authentication and gamification
